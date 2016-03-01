@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>the Bubbly Life</title>
+	
+	<style>
+      #fish1 {
+        fill: red;
+      }
+
+      #fish2 {
+        fill: green;
+      }
+
+      #bubbles {
+        fill: blue;
+      }
+
+      #tank{
+        opacity: 0.5;
+      }
+	  
+	  .bubble1:hover, .bubble2:hover, .bubble3:hover, .bubble4:hover, .bubble5:hover, .bubble6:hover  {
+        opacity: 1;
+      }
+
+      .bubble1:active, .bubble2:active, .bubble3:active, .bubble4:active, .bubble5:active, .bubble6:active {
+        fill: gray;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- SVG element goes around all SVG content -->
+	<!--height and width of svg image-->
+<svg version="1.1" id="button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       width="550px" height="300px" viewBox="0 0 550 300" style="enable-background:new 0 0 550 300;" xml:space="preserve">    
+	<defs>
+        <filter id="my-filter" x="0" y="0">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+          <!-- <feColorMatrix type="saturate" values="5" /> -->
+          <!-- <feMorphology operator="dilate" radius="10" /> -->
+          <!-- <feColorMatrix type="hueRotate" values="180" /> -->
+        </filter>
+      </defs>
+
+      <defs>
+        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="cyan" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="yellow" stop-opacity="0.8" />
+        </linearGradient>
+      </defs>
+
+      <defs>
+        <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="blue" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="cyan" stop-opacity="0.8" />
+        </linearGradient>
+      </defs>
+
+      <defs>
+        <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="orange" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="magenta" stop-opacity="0.8" />
+        </linearGradient>
+      </defs>
+
+      <!-- image -->
+      <!-- <image width="500" height="375" xlink:href="campus.png" filter="url(#my-filter)" opacity="0.2" /> -->
+
+      <!-- 5 sided polygon /"star" fish-->
+	<a xlink:href="http://i6.cims.nyu.edu/~et1012/380/">
+	<g id="fish1">
+      <polygon points="95,70 70,125 170,105 125,125 170,170"
+		style="fill:url(#gradient3);fill-rule:nonzero;"/> </a></g>
+	<a xlink:href="http://i6.cims.nyu.edu/~et1012/">
+	<g id="fish2">
+      <polygon points="345,170 320,225 420,205 375,225 420,270"
+		style="fill:url(#gradient3);fill-rule:nonzero;"/>   </a> </g>
+
+
+      <!-- circle bubbles-->
+	  <g id="bubbles">
+      <circle class="bubble1" cx="120" cy="75" r="25" fill="url(#gradient1)" fill-opacity="0.8" />
+	  <circle class="bubble2" cx="270" cy="125" r="35" fill="url(#gradient1)" fill-opacity="0.8" />
+	  <circle class="bubble3" cx="325" cy="150" r="25" fill="url(#gradient1)" fill-opacity="0.8" />
+	  <circle class="bubble4" cx="200" cy="150" r="25" fill="url(#gradient1)" fill-opacity="0.8" />
+	  <circle class="bubble5" cx="75" cy="150" r="15" fill="url(#gradient1)" fill-opacity="0.8" />
+	  <circle class="bubble6" cx="350" cy="80" r="10" fill="url(#gradient1)" fill-opacity="0.8" /> 
+	  </g>
+	  
+      <!-- rounded rectangle "fish tank" -->
+	  <g id="tank">
+	  <rect x="50" y="20" rx="15" ry="15" width="400" height="250" style="fill:url(#gradient2);stroke:black;stroke-width:0.5;opacity:0.5">
+	  </g>
+ Your browser does not support inline SVG. Sorry.
+    </svg>
+  </body>
+</html>
